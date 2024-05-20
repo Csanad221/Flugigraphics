@@ -12,6 +12,7 @@ int main() {
     GameMaster game_master(board_widget, XX);
 
     event ev;
+    board_widget.draw(game_master.get_current_color());//csak hogy legyen háttér rögtön és ne kelljen egeret rávinni
     while (gin >> ev && ev.keycode != key_escape) {
         game_master.handle_event(ev);
         board_widget.draw(game_master.get_current_color());
